@@ -1,0 +1,18 @@
+<h1>On Count Page</h1>
+
+<a href="{% url 'home' %}">Start Again</a>
+
+<h2>There are {{count}} words in the text</h2>
+
+<h3>Your text:</h3>
+{{fulltext}}
+
+<h2>Check out most repeated words:</h2>
+
+{% for word,counttotal in sortedword %}
+
+{{word}} - {{counttotal}}
+</br>
+
+{% endfor %}
+
